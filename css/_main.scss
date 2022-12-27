@@ -22,7 +22,7 @@ section {
   margin: 0 auto;
   padding: 0 20px;
   position: relative;
-
+  z-index: 99;
 }
 /* header */
 .header {
@@ -166,7 +166,7 @@ section {
       @include flex;
       width: 100%;
       position: relative;
-      
+      z-index: 101;
     }
   }
 }
@@ -175,6 +175,8 @@ a.btn-design {
   padding: 10px 25px;
   font-size: 17px;
   margin-top: 10px;
+  position: relative;
+  z-index: 101;
 }
 .new-oper {
   padding-top: 90px;
@@ -216,6 +218,7 @@ a.btn-design {
         bottom: 90px;
         left: 50%;
         transform: translate(-50%, -50%);
+        z-index: 101;
       }
     }
   }
