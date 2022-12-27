@@ -283,10 +283,37 @@ a.btn-design {
 
 /* footer */
 .sns-wrapper {
+  @include flex;
   width: 100%;
   height: 90px;
   padding-top: 30px;
   background-color: #000;
   position: relative;
   z-index: 98;
+  .container {
+    @include flex;
+    .sns-list {
+      @include flex;
+      li {
+        a {
+          display: block;
+          width: 31px;
+          height: 31px;
+          padding-left: 11px;
+          padding-right: 11px;
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .visit {
+      font-family: 'Noto Sans KR';
+      font-size: 13px;
+      color: #888;
+      position: absolute;
+      bottom: 25%;
+      left: 20px;
+    }
+  }
 }
