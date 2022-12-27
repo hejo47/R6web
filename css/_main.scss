@@ -313,7 +313,46 @@ a.btn-design {
       color: #888;
       position: absolute;
       bottom: 25%;
-      left: 20px;
+      left: 40px;
     }
+  }
+}
+.footer {
+  @include flex;
+  .ubsoft {
+    width: 20%;
+    max-width: 350px;
+    background-color: #1d1e21;
+    padding: 40px;
+    .ub-list {
+      @include flex(column, center, flex-start);
+      row-gap: 11px;
+      margin-top: 40px;
+      margin-bottom: 40px;
+      li {
+        a {
+          text-transform: uppercase;
+          color: #FFF;
+          font-size: 18px;
+        }
+      }
+    }
+    .privacy-list {
+      @include flex(column, center, flex-start);
+      line-height: 1em;
+      li {
+        a {
+          text-transform: uppercase;
+          color: #FFF;
+          font-size: 12px;
+          font-family: 'Noto Sans KR';
+        }
+      }
+    }
+  }
+  .r6 {
+    width: 80%;
+    max-width: 1610px;
+    background-color: #101114;
   }
 }
