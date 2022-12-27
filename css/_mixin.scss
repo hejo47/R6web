@@ -1,0 +1,13 @@
+// MIXIN
+// size
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+//flex
+@mixin flex($direction: row, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: row;
+  justify-content: justify;
+  align-items: center;
+}
