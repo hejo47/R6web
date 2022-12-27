@@ -1,3 +1,7 @@
+body {
+  position: relative;
+  z-index: -1;
+}
 .container {
   width: 100%;
   max-width: 1920px;
@@ -65,8 +69,10 @@
   }
 }
 .news-banner {
-  @include flex;
+  @include flex(row, center, flex-start);
   flex-wrap: wrap;
+  position: relative;
+  z-index: -1;
   background: linear-gradient(90deg,rgba(20,71,102,.85),rgba(41, 210, 254, .85),rgba(20, 71, 102, .85)),
   url(../img/main/news_bg_1.png) 100% 0 no-repeat,
   url(../img/main/news_bg_2.png) 0 0 no-repeat,
@@ -74,9 +80,25 @@
   url(../img/main/news_bg_4.png) 0 100% no-repeat;
   background-size: cover, auto, auto, auto, auto;
   padding: 90px 0;
+  &::after {
+    width: 100%;
+    height: 80px;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -40px;
+    background-image: url(../img/main/snow_line.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .container {
+    @include flex(row, center, flex-start);
+  }
   .section-title {
     @include flex;
     width: 100%;
+    margin-bottom: 60px;
     h2 {
       color: #FFF;
       text-transform: uppercase;
@@ -85,12 +107,57 @@
     }
   }
   .highlight {
-    width: 50%;
-
+    width: calc(50% - 60px);
+    padding-left: 30px;
+    padding-right: 30px;
+    .highlight-wrapper {
+      .img {
+        img {
+          width: 100%;
+          display: block;
+        }
+      }
+      .txt {
+        padding: 30px;
+        color: #FFF;
+        background-color: $main-theme-color;
+      }
+    }
   }
   .news {
-    width: 50%;
+    width: calc(50% - 60px);
+    padding-left: 30px;
+    padding-right: 30px;
+    .news-wrapper {
+      @include flex(row, flex-start, flex-start);
+      margin-bottom: 20px;
+      background-color: $main-theme-color;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+      img {
+        width: 50%;
+        display: block;
+      }
+      .txt {
+        width: 50%;
+        color: #FFF;
+        padding: 15px;
+      }
+    }
+    .btn-wrap {
+      @include flex;
+      width: 100%;
+      position: relative;
+      
+    }
   }
+}
+a.btn-design {
+  background-color: $btn-color;
+  padding: 10px 25px;
+  font-size: 17px;
+  margin-top: 10px;
 }
 
 /* footer */
