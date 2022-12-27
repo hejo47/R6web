@@ -319,11 +319,12 @@ a.btn-design {
 }
 .footer {
   @include flex;
+  background-color: #101114;
   .ubsoft {
     width: 20%;
     max-width: 350px;
     background-color: #1d1e21;
-    padding: 40px;
+    padding: 40px 60px;
     .ub-list {
       @include flex(column, center, flex-start);
       row-gap: 11px;
@@ -351,8 +352,57 @@ a.btn-design {
     }
   }
   .r6 {
+    @include flex(row, center, flex-start);
     width: 80%;
     max-width: 1610px;
-    background-color: #101114;
+    .center {
+      padding: 40px;
+      .top {
+        margin-bottom: 35px;
+      }
+    }
+    .middle {
+      @include flex(row, flex-start, flex-start);
+      color: #FFF;
+      text-transform: uppercase;
+      p {
+        margin: 10px 0 20px;
+        font-family: 'Noto Sans KR';
+        font-size: 12px;
+      }
+      div {
+        width: calc(100% / 3);
+      }
+    }
+    .bottom {
+      .copy {
+        color: #FFF;
+        font-family: 'Noto Sans KR';
+        word-break: keep-all;
+        font-size: 12px;
+        line-height: 1.25;
+        display: block;
+        text-align: center;
+        margin-top: 55px;
+      }
+    }
+    
+  }
+  .right {
+    @include flex(column, space-between, flex-start);
+    height: 100%;
+    color: #FFF;
+    text-transform: uppercase;
+    padding: 40px;
+    .age {
+      @include flex(column);
+      text-align: center;
+      font-size: 10px;
+      margin-top: 200px;
+      span {
+        font-family: 'Noto Sans KR';
+        margin-bottom: 20px;
+      }
+    }
   }
 }
