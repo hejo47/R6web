@@ -15,14 +15,12 @@ section {
     background-repeat: repeat;
   }
 }
-@keyframes snow{0%{background-position:0 0,0 0,0 0}to{background-position:500px 1000px,400px 400px,300px 300px}}
+@keyframes snow {0%{background-position:0 0,0 0,0 0}to{background-position:500px 1000px,400px 400px,300px 300px}}
 .container {
   width: 100%;
   max-width: 1920px;
   margin: 0 auto;
   padding: 0 20px;
-  position: relative;
-  z-index: 99;
 }
 /* header */
 .header {
@@ -68,9 +66,9 @@ section {
 /* main */
 .main-banner {
   @include size(100%, 37vw);
-  position: relative;
-  z-index: -1;
   background-color: #567;
+  position: relative;
+  z-index: 99;
   &::after {
     width: 100%;
     height: 80px;
@@ -78,7 +76,6 @@ section {
     position: absolute;
     bottom: -40px;
     left: 0;
-    z-index: 0;
     background-image: url(../img/main/snow_line.png);
     background-position: center;
     background-repeat: no-repeat;
@@ -89,7 +86,6 @@ section {
   @include flex(row, center, flex-start);
   flex-wrap: wrap;
   position: relative;
-  z-index: -2;
   background: linear-gradient(90deg,rgba(20,71,102,.85),rgba(41, 210, 254, .85),rgba(20, 71, 102, .85)),
   url(../img/main/news_bg_1.png) 100% 0 no-repeat,
   url(../img/main/news_bg_2.png) 0 0 no-repeat,
@@ -104,7 +100,7 @@ section {
     position: absolute;
     left: 0;
     bottom: -40px;
-    z-index: 0;
+    z-index: 100;
     background-image: url(../img/main/snow_line.png);
     background-position: center;
     background-repeat: no-repeat;
@@ -112,8 +108,6 @@ section {
   }
   .container {
     @include flex(row, center, flex-start);
-    position: relative;
-    z-index: 98;
   }
   .section-title {
     @include flex;
@@ -130,6 +124,8 @@ section {
     width: calc(50% - 60px);
     padding-left: 30px;
     padding-right: 30px;
+    position: relative;
+    z-index: 101;
     .highlight-wrapper {
       .img {
         img {
@@ -148,6 +144,8 @@ section {
     width: calc(50% - 60px);
     padding-left: 30px;
     padding-right: 30px;
+    position: relative;
+    z-index: 101;
     .news-wrapper {
       @include flex(row, flex-start, flex-start);
       margin-bottom: 20px;
@@ -175,15 +173,14 @@ a.btn-design {
   padding: 10px 25px;
   font-size: 17px;
   margin-top: 10px;
-  position: relative;
-  z-index: 101;
+
 }
 .new-oper {
   padding-top: 90px;
   background: linear-gradient(90deg,rgba(20,71,102,.65), rgba(41,210,254,.65),rgba(20,71,102,.65)), url(../img/main/oper.bg.jpg) 50% 50% no-repeat;
   background-size: cover, cover;
   position: relative;
-  z-index: -11;
+  z-index: 99;
   &::after {
     width: 100%;
     height: 80px;
@@ -191,7 +188,7 @@ a.btn-design {
     position: absolute;
     left: 0;
     bottom: -40px;
-    z-index: 0;
+    z-index: 100;
     background-image: url(../img/main/snow_line.png);
     background-position: center;
     background-repeat: no-repeat;
@@ -210,6 +207,7 @@ a.btn-design {
     }
     .oper-img {
       @include flex;
+      position: relative;
       img {
         display: block;
       }
@@ -217,8 +215,7 @@ a.btn-design {
         position: absolute;
         bottom: 90px;
         left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 101;
+        transform: translateX(-70%);
       }
     }
   }
@@ -226,10 +223,10 @@ a.btn-design {
 
 /* footer */
 .sns-wrapper {
-  position: relative;
-  z-index: -15;
   width: 100%;
   height: 90px;
   padding-top: 30px;
   background-color: #000;
+  position: relative;
+  z-index: 98;
 }
