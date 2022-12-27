@@ -1,7 +1,26 @@
 body {
   position: relative;
-  z-index: -1;
-}
+  z-index: -99;
+  overflow-x: hidden;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/main/snow_bg_1.png), url(../img/main/snow_bg_2.png), url(../img/main/snow_bg_3.png), url(../img/main/snow_bg_4.png);
+    -webkit-animation: snow 10s linear infinite;
+    -moz-animation: snow 10s linear infinite;
+    -ms-animation: snow 10s linear infinite;
+    animation: snow 10s linear infinite;
+    background-repeat: repeat;
+    z-index: 1;
+  }
+@-webkit-keyframes snow{0%{background-position:0 0,0 0,0 0}to{background-position:500px 1000px,400px 400px,300px 300px}}
+@-moz-keyframes snow{0%{background-position:0 0,0 0,0 0}to{background-position:500px 1000px,400px 400px,300px 300px}}
+@-ms-keyframes snow{0%{background-position:0 0,0 0,0 0}to{background-position:500px 1000px,400px 400px,300px 300px}}
+@keyframes snow{0%{background-position:0 0,0 0,0 0}to{background-position:500px 1000px,400px 400px,300px 300px}}
 .container {
   width: 100%;
   max-width: 1920px;
@@ -17,7 +36,6 @@ body {
   left: 0;
   z-index: 999;
   background-color: $main-theme-color;
-  
   &-left-wrapper {
     @include flex(row, flex-start);
     .logo {
@@ -62,6 +80,7 @@ body {
     position: absolute;
     bottom: -40px;
     left: 0;
+    z-index: 0;
     background-image: url(../img/main/snow_line.png);
     background-position: center;
     background-repeat: no-repeat;
@@ -87,6 +106,7 @@ body {
     position: absolute;
     left: 0;
     bottom: -40px;
+    z-index: 0;
     background-image: url(../img/main/snow_line.png);
     background-position: center;
     background-repeat: no-repeat;
@@ -132,9 +152,6 @@ body {
       @include flex(row, flex-start, flex-start);
       margin-bottom: 20px;
       background-color: $main-theme-color;
-      &:last-of-type {
-        margin-bottom: 0;
-      }
       img {
         width: 50%;
         display: block;
@@ -159,5 +176,57 @@ a.btn-design {
   font-size: 17px;
   margin-top: 10px;
 }
+.new-oper {
+  padding-top: 90px;
+  background: linear-gradient(90deg,rgba(20,71,102,.65), rgba(41,210,254,.65),rgba(20,71,102,.65)), url(../img/main/oper.bg.jpg) 50% 50% no-repeat;
+  background-size: cover, cover;
+  position: relative;
+  z-index: -11;
+  &::after {
+    width: 100%;
+    height: 80px;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -40px;
+    z-index: 0;
+    background-image: url(../img/main/snow_line.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .container {
+    .oper-title {
+      width: 100%;
+      text-align: center;
+      h2 {
+        font-size: 55px;
+        text-transform: uppercase;
+        color: #FFF;
+        text-shadow: 0 0 5px #144766, 0 0 10px #144766, 0 0 20px #144766, 0 0 30px #29d2fe, 0 0 40px #29d2fe, 0 0 50px #fff;
+      }
+    }
+    .oper-img {
+      @include flex;
+      img {
+        display: block;
+      }
+      .btn-wrap {
+        position: absolute;
+        bottom: 90px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}
 
 /* footer */
+.sns-wrapper {
+  position: relative;
+  z-index: -15;
+  width: 100%;
+  height: 90px;
+  padding-top: 30px;
+  background-color: #000;
+}
