@@ -31,6 +31,9 @@ section {
   left: 0;
   z-index: 999;
   background-color: $main-theme-color;
+  .container {
+    @include flex(row, space-between, center);
+  }
   &-left-wrapper {
     @include flex(row, flex-start);
     .logo {
@@ -291,6 +294,13 @@ a.btn-design {
   font-size: 17px;
   margin-top: 10px;
   text-transform: uppercase;
+}
+a.btn-design2 {
+  padding: 10px 25px;
+  font-size: 17px;
+  margin-top: 10px;
+  text-transform: uppercase;
+  color: #FFF;
 }
 .new-oper {
   padding-top: 90px;
