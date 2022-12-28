@@ -172,7 +172,19 @@ section {
     }
   }
   .right-banner {
-
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background-image: url(../img/main/ice_effect1.png), url(../img/main/ice_effect2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top left, bottom right;
+    a.btn-design {
+      position: absolute;
+      bottom: 0;
+      display: inline-block;
+    }
   }
 }
 .news-banner {
@@ -287,7 +299,6 @@ section {
       .img {
         width: 50%;
         display: block;
-        
         img {
           width: 100%;
           display: block;
@@ -297,6 +308,40 @@ section {
         width: 50%;
         color: #FFF;
         padding: 15px;
+        span {
+          display: inline-block;
+          background-color: #24262a;
+          padding: 5px 10px;
+          font-size: 15px;
+          position: relative;
+          &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            right: -7px;
+            top: 0;
+            width: 14px;
+            height: 100%;
+            background-color: inherit;
+            -webkit-transform: skew(-26deg);
+            transform: skew(-26deg);
+          }
+        }
+        p {
+          font-size: 14px;
+          font-family: "Noto Sans KR";
+          line-height: 1;
+          display: block;
+          margin-top: 10px;
+        }
+        .btn-pretend {
+          text-transform: uppercase;
+          padding: 5px 10px;
+          display: inline-block;
+          background-color: $btn-color;
+          margin-top: 15px;
+          color: #333;
+        }
       }
       position: relative;
         &::after {
