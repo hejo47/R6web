@@ -141,6 +141,39 @@ section {
     width: 100%;
     display: block;
   }
+  .left-banner {
+    width: 380px;
+    padding: 30px;
+    position: absolute;
+    top: 50%;
+    left: 90px;
+    transform: translateY(-50%);
+    background-color: rgba(20,71,102,.6)!important;
+    background-image: url(../img/main/ice_effect1.png), url(../img/main/ice_effect2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top left, bottom right;
+    border: 1px solid #29d2fe;
+    z-index: 102;
+    h2 {
+      color: $btn-color;
+      font-size: 50px;
+    }
+    p {
+      font-family: 'Noto Sans KR';
+      color: #FFF;
+      display: block;
+      margin-top: 10px;
+      letter-spacing: -0.02em;
+    }
+    a.btn-design {
+      display: inline-block;
+      margin-top: 15px;
+    }
+  }
+  .right-banner {
+
+  }
 }
 .news-banner {
   @include flex(row, center, flex-start);
