@@ -45,6 +45,9 @@ section {
       }
     }
     .gnb {
+      @include mobile{
+        display: none;
+      }
       margin-left: 10px;
       ul.depth1 {
       @include flex(row, flex-start, flex-start);
@@ -374,6 +377,9 @@ a.btn-design {
   text-transform: uppercase;
 }
 a.btn-design2 {
+  @include mobile {
+    
+  }
   padding: 10px 25px;
   font-size: 17px;
   margin-top: 10px;
