@@ -41,6 +41,9 @@ section {
         display: block;
         img {
           display: block;
+          @include mobile {
+            max-height: 30px;
+          }
         }
       }
     }
@@ -161,6 +164,9 @@ section {
     background-position: top left, bottom right;
     border: 1px solid #29d2fe;
     z-index: 102;
+    @include mobile {
+      display: none;
+    }
     h2 {
       color: $btn-color;
       font-size: 50px;
@@ -249,6 +255,10 @@ section {
     }
     padding-left: 30px;
     padding-right: 30px;
+    @include mobile {
+      padding-left: 0;
+      padding-right: 0;
+    }
     position: relative;
     z-index: 101;
     .highlight-wrapper {
@@ -308,20 +318,28 @@ section {
   }
   .news {
     width: calc(50% - 60px);
-    @include mobile {
-      width: 100%;
-    }
     padding-left: 30px;
     padding-right: 30px;
+    @include mobile {
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+    }
     position: relative;
     z-index: 101;
     .news-wrapper {
       @include flex(row, flex-start, flex-start);
+      @include mobile {
+        @include flex(column, flex-start, flex-start);
+      }
       margin-bottom: 20px;
       background-color: $main-theme-color;
       .img {
         width: 50%;
         display: block;
+        @include mobile {
+          width: 100%;
+        }
         img {
           width: 100%;
           display: block;
@@ -331,6 +349,9 @@ section {
         width: 50%;
         color: #FFF;
         padding: 15px;
+        @include mobile {
+          width: 100%;
+        }
         span {
           display: inline-block;
           background-color: #24262a;
@@ -395,16 +416,21 @@ a.btn-design {
   font-size: 17px;
   margin-top: 10px;
   text-transform: uppercase;
+  @include mobile {
+    padding: 5px 10px;
+    font-size: 14px;
+  }
 }
 a.btn-design2 {
-  @include mobile {
-    
-  }
   padding: 10px 25px;
   font-size: 17px;
   margin-top: 10px;
   text-transform: uppercase;
   color: #FFF;
+  @include mobile {
+    padding: 5px 10px;
+    font-size: 14px;
+  }
 }
 .new-oper {
   padding-top: 90px;
@@ -481,6 +507,10 @@ a.btn-design2 {
           height: 31px;
           padding-left: 11px;
           padding-right: 11px;
+          @include mobile {
+            padding-left: 5px;
+            padding-right: 5px;
+          }
           img {
             width: 100%;
           }
@@ -494,17 +524,31 @@ a.btn-design2 {
       position: absolute;
       bottom: 25%;
       left: 40px;
+      @include mobile {
+        bottom: unset;
+        top: 20%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
     }
   }
 }
 .footer {
   @include flex;
   background-color: #101114;
+  overflow-x: hidden;
+  @include mobile {
+    @include flex(column, flex-start, center);
+  }
   .ubsoft {
     width: 20%;
     max-width: 350px;
     background-color: #1d1e21;
     padding: 40px 60px;
+    @include mobile {
+      width: 100%;
+      padding: 30px 45px;
+    }
     .ub-list {
       @include flex(column, center, flex-start);
       row-gap: 11px;
@@ -535,6 +579,10 @@ a.btn-design2 {
     @include flex(row, center, flex-start);
     width: 80%;
     max-width: 1610px;
+    @include mobile {
+      width: 100%;
+      flex-direction: column;
+    }
     .center {
       padding: 40px;
       .top {
