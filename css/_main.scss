@@ -41,14 +41,14 @@ section {
         display: block;
         img {
           display: block;
-          @include mobile {
+          @include tablet {
             max-height: 30px;
           }
         }
       }
     }
     .gnb {
-      @include mobile{
+      @include tablet{
         display: none;
       }
       margin-left: 10px;
@@ -137,7 +137,7 @@ section {
     content: "";
     position: absolute;
     bottom: -105px;
-    @include mobile {
+    @include tablet {
       display: none;
     }
     left: 0;
@@ -164,7 +164,7 @@ section {
     background-position: top left, bottom right;
     border: 1px solid #29d2fe;
     z-index: 102;
-    @include mobile {
+    @include tablet {
       display: none;
     }
     h2 {
@@ -210,7 +210,7 @@ section {
   url(../img/main/news_bg_4.png) 0 100% no-repeat;
   background-size: cover, auto, auto, auto, auto;
   padding: 180px 0;
-  @include mobile {
+  @include tablet {
     padding: 60px 0;
   }
   &::after {
@@ -234,7 +234,7 @@ section {
     @include flex;
     width: 100%;
     margin-bottom: 60px;
-    @include mobile {
+    @include tablet {
       margin-top: 30px;
       margin-bottom: 30px;
     }
@@ -242,7 +242,7 @@ section {
       color: #FFF;
       text-transform: uppercase;
       font-size: 55px;
-      @include mobile {
+      @include tablet {
         font-size: 30px;
       }
       text-shadow: 0 0 5px #144766, 0 0 10px #144766, 0 0 20px #144766, 0 0 30px #29d2fe, 0 0 40px #29d2fe, 0 0 50px #fff;
@@ -250,12 +250,12 @@ section {
   }
   .highlight {
     width: calc(50% - 60px);
-    @include mobile {
+    @include tablet {
       width: 100%;
     }
     padding-left: 30px;
     padding-right: 30px;
-    @include mobile {
+    @include tablet {
       padding-left: 0;
       padding-right: 0;
     }
@@ -300,13 +300,15 @@ section {
         }
         h3 {
           font-size: 25px;
-          @include mobile {
+          @include tablet {
             font-size: 18px;
           }
         }
         span {
           display: block;
           margin-top: 15px;
+          font-family: 'Noto Sans KR', sans-serif;
+          word-break: break-all;
         }
         .btn-wrap {
           display: block;
@@ -323,7 +325,7 @@ section {
     width: calc(50% - 60px);
     padding-left: 30px;
     padding-right: 30px;
-    @include mobile {
+    @include tablet {
       width: 100%;
       padding-left: 0;
       padding-right: 0;
@@ -332,7 +334,7 @@ section {
     z-index: 101;
     .news-wrapper {
       @include flex(row, flex-start, flex-start);
-      @include mobile {
+      @include tablet {
         @include flex(column, flex-start, flex-start);
       }
       margin-bottom: 20px;
@@ -340,7 +342,7 @@ section {
       .img {
         width: 50%;
         display: block;
-        @include mobile {
+        @include tablet {
           width: 100%;
         }
         img {
@@ -352,11 +354,11 @@ section {
         width: 50%;
         color: #FFF;
         padding: 15px;
-        @include mobile {
+        @include tablet {
           width: 100%;
         }
         h3 {
-          @include mobile {
+          @include tablet {
             font-size: 16px;
           }
         }
@@ -366,6 +368,8 @@ section {
           padding: 5px 10px;
           font-size: 15px;
           position: relative;
+          font-family: 'Noto Sans KR';
+          word-break: break-all;
           &::after {
             content: "";
             display: block;
@@ -385,6 +389,7 @@ section {
           line-height: 1;
           display: block;
           margin-top: 10px;
+          word-break: break-all;
         }
         .btn-pretend {
           text-transform: uppercase;
@@ -424,7 +429,7 @@ a.btn-design {
   font-size: 17px;
   margin-top: 10px;
   text-transform: uppercase;
-  @include mobile {
+  @include tablet {
     padding: 5px 10px;
     font-size: 14px;
   }
@@ -435,7 +440,7 @@ a.btn-design2 {
   margin-top: 10px;
   text-transform: uppercase;
   color: #FFF;
-  @include mobile {
+  @include tablet {
     padding: 5px 10px;
     font-size: 14px;
   }
@@ -446,7 +451,7 @@ a.btn-design2 {
   background-size: cover, cover;
   position: relative;
   z-index: 99;
-  @include mobile {
+  @include tablet {
     padding-top: 30px;
   }
   &::after {
@@ -463,7 +468,7 @@ a.btn-design2 {
     background-size: contain;
   }
   .container {
-    @include mobile {
+    @include tablet {
       width: unset;
     }
     .oper-title {
@@ -471,7 +476,7 @@ a.btn-design2 {
       text-align: center;
       h2 {
         font-size: 55px;
-        @include mobile {
+        @include tablet {
           font-size: 22px;
         }
         text-transform: uppercase;
@@ -518,7 +523,7 @@ a.btn-design2 {
           height: 31px;
           padding-left: 11px;
           padding-right: 11px;
-          @include mobile {
+          @include tablet {
             padding-left: 5px;
             padding-right: 5px;
           }
@@ -535,7 +540,7 @@ a.btn-design2 {
       position: absolute;
       bottom: 25%;
       left: 40px;
-      @include mobile {
+      @include tablet {
         bottom: unset;
         top: 20%;
         left: 50%;
@@ -548,7 +553,7 @@ a.btn-design2 {
   @include flex;
   background-color: #101114;
   overflow-x: hidden;
-  @include mobile {
+  @include tablet {
     @include flex(column, flex-start, center);
   }
   .ubsoft {
@@ -556,9 +561,10 @@ a.btn-design2 {
     max-width: 350px;
     background-color: #1d1e21;
     padding: 40px 60px;
-    @include mobile {
+    @include tablet {
       width: 100%;
       padding: 30px 45px;
+      max-width: unset;
     }
     .ub-list {
       @include flex(column, center, flex-start);
@@ -590,7 +596,7 @@ a.btn-design2 {
     @include flex(row, center, flex-start);
     width: 80%;
     max-width: 1610px;
-    @include mobile {
+    @include tablet {
       width: 100%;
       flex-direction: column;
     }
@@ -604,7 +610,7 @@ a.btn-design2 {
       @include flex(row, flex-start, flex-start);
       color: #FFF;
       text-transform: uppercase;
-      @include mobile {
+      @include tablet {
         @include flex(column);
       }
       p {
@@ -614,7 +620,7 @@ a.btn-design2 {
       }
       div {
         width: calc(100% / 3);
-        @include mobile {
+        @include tablet {
           width: 100%;
           margin-top: 10px;
         }
@@ -645,7 +651,7 @@ a.btn-design2 {
       text-align: center;
       font-size: 10px;
       margin-top: 200px;
-      @include mobile {
+      @include tablet {
         margin-top: 30px;
       }
       span {
