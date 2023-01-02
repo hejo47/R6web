@@ -355,7 +355,7 @@ section {
         color: #FFF;
         padding: 15px;
         @include tablet {
-          width: 100%;
+          width: calc(100% - 30px);
         }
         h3 {
           @include tablet {
@@ -564,7 +564,7 @@ a.btn-design2 {
     @include tablet {
       width: 100%;
       padding: 30px 45px;
-      max-width: unset;
+      max-width: -webkit-fill-available;
     }
     .ub-list {
       @include flex(column, center, flex-start);

@@ -94,7 +94,7 @@ section::before {
 .header-left-wrapper .logo a img {
   display: block;
 }
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (max-width: 1023px) {
   .header-left-wrapper .logo a img {
     max-height: 30px;
   }
@@ -102,7 +102,7 @@ section::before {
 .header-left-wrapper .gnb {
   margin-left: 10px;
 }
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (max-width: 1023px) {
   .header-left-wrapper .gnb {
     display: none;
   }
@@ -203,7 +203,7 @@ section::before {
   background-repeat: no-repeat;
   background-size: contain;
 }
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (max-width: 1023px) {
   .main-banner::after {
     display: none;
   }
@@ -227,7 +227,7 @@ section::before {
   border: 1px solid #29d2fe;
   z-index: 102;
 }
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (max-width: 1023px) {
   .main-banner .left-banner {
     display: none;
   }
@@ -274,7 +274,7 @@ section::before {
   background-size: cover, auto, auto, auto, auto;
   padding: 180px 0;
 }
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (max-width: 1023px) {
   .news-banner {
     padding: 60px 0;
   }
@@ -307,7 +307,7 @@ section::before {
   width: 100%;
   margin-bottom: 60px;
 }
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (max-width: 1023px) {
   .news-banner .section-title {
     margin-top: 30px;
     margin-bottom: 30px;
@@ -319,7 +319,7 @@ section::before {
   font-size: 55px;
   text-shadow: 0 0 5px #144766, 0 0 10px #144766, 0 0 20px #144766, 0 0 30px #29d2fe, 0 0 40px #29d2fe, 0 0 50px #fff;
 }
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (max-width: 1023px) {
   .news-banner .section-title h2 {
     font-size: 30px;
   }
@@ -331,12 +331,12 @@ section::before {
   position: relative;
   z-index: 101;
 }
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (max-width: 1023px) {
   .news-banner .highlight {
     width: 100%;
   }
 }
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (max-width: 1023px) {
   .news-banner .highlight {
     padding-left: 0;
     padding-right: 0;
@@ -382,7 +382,7 @@ section::before {
 .news-banner .highlight .highlight-wrapper .txt h3 {
   font-size: 25px;
 }
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (max-width: 1023px) {
   .news-banner .highlight .highlight-wrapper .txt h3 {
     font-size: 18px;
   }
@@ -408,7 +408,7 @@ section::before {
   position: relative;
   z-index: 101;
 }
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (max-width: 1023px) {
   .news-banner .news {
     width: 100%;
     padding-left: 0;
@@ -424,7 +424,7 @@ section::before {
   background-color: #144766;
   position: relative;
 }
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (max-width: 1023px) {
   .news-banner .news .news-wrapper {
     display: flex;
     flex-direction: column;
@@ -436,7 +436,7 @@ section::before {
   width: 50%;
   display: block;
 }
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (max-width: 1023px) {
   .news-banner .news .news-wrapper .img {
     width: 100%;
   }
@@ -450,12 +450,12 @@ section::before {
   color: #FFF;
   padding: 15px;
 }
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (max-width: 1023px) {
   .news-banner .news .news-wrapper .txt {
-    width: 100%;
+    width: calc(100% - 30px);
   }
 }
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (max-width: 1023px) {
   .news-banner .news .news-wrapper .txt h3 {
     font-size: 16px;
   }
@@ -525,7 +525,7 @@ a.btn-design {
   margin-top: 10px;
   text-transform: uppercase;
 }
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (max-width: 1023px) {
   a.btn-design {
     padding: 5px 10px;
     font-size: 14px;
@@ -539,7 +539,7 @@ a.btn-design2 {
   text-transform: uppercase;
   color: #FFF;
 }
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (max-width: 1023px) {
   a.btn-design2 {
     padding: 5px 10px;
     font-size: 14px;
@@ -553,7 +553,7 @@ a.btn-design2 {
   position: relative;
   z-index: 99;
 }
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (max-width: 1023px) {
   .new-oper {
     padding-top: 30px;
   }
@@ -571,7 +571,7 @@ a.btn-design2 {
   background-repeat: no-repeat;
   background-size: contain;
 }
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (max-width: 1023px) {
   .new-oper .container {
     width: unset;
   }
@@ -586,7 +586,7 @@ a.btn-design2 {
   color: #FFF;
   text-shadow: 0 0 5px #144766, 0 0 10px #144766, 0 0 20px #144766, 0 0 30px #29d2fe, 0 0 40px #29d2fe, 0 0 50px #fff;
 }
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (max-width: 1023px) {
   .new-oper .container .oper-title h2 {
     font-size: 22px;
   }
@@ -643,7 +643,7 @@ a.btn-design2 {
   padding-left: 11px;
   padding-right: 11px;
 }
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (max-width: 1023px) {
   .sns-wrapper .container .sns-list li a {
     padding-left: 5px;
     padding-right: 5px;
@@ -660,7 +660,7 @@ a.btn-design2 {
   bottom: 25%;
   left: 40px;
 }
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (max-width: 1023px) {
   .sns-wrapper .container .visit {
     bottom: unset;
     top: 20%;
@@ -677,7 +677,7 @@ a.btn-design2 {
   background-color: #101114;
   overflow-x: hidden;
 }
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (max-width: 1023px) {
   .footer {
     display: flex;
     flex-direction: column;
@@ -691,11 +691,11 @@ a.btn-design2 {
   background-color: #1d1e21;
   padding: 40px 60px;
 }
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (max-width: 1023px) {
   .footer .ubsoft {
     width: 100%;
     padding: 30px 45px;
-    max-width: unset;
+    max-width: -webkit-fill-available;
   }
 }
 .footer .ubsoft .ub-list {
@@ -733,7 +733,7 @@ a.btn-design2 {
   width: 80%;
   max-width: 1610px;
 }
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (max-width: 1023px) {
   .footer .r6 {
     width: 100%;
     flex-direction: column;
@@ -753,7 +753,7 @@ a.btn-design2 {
   color: #FFF;
   text-transform: uppercase;
 }
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (max-width: 1023px) {
   .footer .r6 .middle {
     display: flex;
     flex-direction: column;
@@ -769,7 +769,7 @@ a.btn-design2 {
 .footer .r6 .middle div {
   width: 33.3333333333%;
 }
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (max-width: 1023px) {
   .footer .r6 .middle div {
     width: 100%;
     margin-top: 10px;
@@ -804,7 +804,7 @@ a.btn-design2 {
   font-size: 10px;
   margin-top: 200px;
 }
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (max-width: 1023px) {
   .footer .right .age {
     margin-top: 30px;
   }
